@@ -111,38 +111,64 @@ For Hardware:
 ![Components](images/PCA9685.jpeg)
 *PCA9685-: 16-channel, 12-bit PWM servo controller communicating over I²C*
 
+
+
 ![Components](images/Servos.jpeg)
 *servos SG90-: 9g micro servo, ~4.8–6V operating range; the actual muscle behind the chaos*
+
+
 
 ![Components](images/arduino.jpeg)
 *Arduino uno-:ATmega328P microcontroller, 5V logic; the brain of the operation*
 
+
+
 ![Components](images/battery.jpeg)
 *Battery-: 2 × 3.3V cells wired in parallel to bump up available current without touching the voltage*
+
+
 
 ![Components](images/boostconnector.jpeg)
 *boostconnector-:Steps the battery pack up to a clean, regulated 5V rail dedicated entirely to the servos*
 
+
+
 ![Components](images/ky038.jpeg)
 *ky038-: Analog sound detection via the AO pin*
 
+
+
 ![Build](images/starting.jpeg)
 *Cardboard pieces were cut and assembled to form the head, torso, arms, and legs, creating the basic Pinocchio appearance.*
+
+
 
 ![Build](images/fourservos.jpeg)
 *Shows the four SG90 servo motors operating and driving the corresponding arm and leg movements of the cardboard Pinocchio..*
 
 
+
+
 ![Final](images/pinocchio.jpeg)
 Shows the completed cardboard Pinocchio with the servo mechanism and electronic components fully assembled and ready for operation.*
 
+
+
 ### Project Demo
 # Video
-[Add your demo video link here]
-*Explain what the video demonstrates*
+[https://drive.google.com/file/d/1pBaQomKxERagcCoK-a2UyCixR83ZhLKg/view?usp=drivesdk]
+*The video demonstrates the completed cardboard Pinocchio detecting sound and performing pre-programmed movements using four SG90 servo motors.*
+
+
 
 # Additional Demos
-[Add any extra demo materials/links]
+[https://drive.google.com/file/d/1gXCJf52ZZZA922sM1aEDvQJP2M6JGV7T/view?usp=drivesdk]
+*This video shows the working of servos in the beginning.*
+
+
+
+[https://drive.google.com/file/d/1ncvpna5PuDxMzd_lP-g2K6cUNU46QHjk/view?usp=drivesdk]
+*The video shows our presentation in the college.*
 
 ## Team Contributions
 - Snoopa K:
