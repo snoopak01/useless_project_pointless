@@ -14,13 +14,13 @@
 - Member 2: SAI KRISHNA -  NSS COLLEGE OF ENGINEERING,PALAKKAD
 - 
 ### Project Description
-A sound-responsive robotic puppet engineered using an Arduino UNO, KY-038 acoustic sensor, PCA9685 PWM servo controller, and four SG90 actuators. The system performs autonomous, pre-programmed locomotion sequences in response to detected acoustic stimuli, translating variations in sound intensity into coordinated mechanical movements of the puppet's limbs.
+A closed-loop, real-time acoustic-to-kinematic transduction system — or, in terms a human might use, a puppet that hears music and immediately loses all composure. Built on an Arduino UNO, a KY-038 acoustic front-end, a PCA9685 12-bit PWM servo controller, and four SG90 actuators, the system continuously samples ambient sound pressure, classifies it against a calibrated threshold, and converts qualifying acoustic events into a synchronized, pre-programmed limb-actuation sequence. In simpler terms: it hears a bop, and it *becomes* the bop.
 
 ### The Problem (that doesn't exist)
-In a world where music is already perfectly enjoyable, people still face the devastating problem of having nobody physically dance to every beat of their favorite song. This project solves this completely unnecessary crisis by creating an autonomous puppet that detects sound and performs synchronized robotic dance movements—because apparently, music simply isn't enough without a tiny robot having a breakdown on stage.
+Modern acoustic playback technology has, regrettably, solved the problem of listening to music. This is a crisis. Humanity can now hear songs perfectly well *without* a nearby entity physically reacting to every single beat, and frankly, that's an unacceptable gap in the audio experience. Somewhere, right now, a perfectly good drop is happening and nothing is visibly losing its mind about it. We consider this a systems failure.
 
 ### The Solution (that nobody asked for)
-We deployed an autonomous acoustic-to-motion translation system a fancy way of saying we taught a tiny puppet to hear music and immediately lose its composure. Using a sound sensor, Arduino, and four servo motors, it detects sufficiently loud music and unleashes a pre-programmed dance routine, ensuring that no beat goes completely un-danced-to.
+We engineered — and we use that word with complete sincerity and zero shame — an autonomous acoustic-to-motion translation pipeline. Strip away the sensor fusion vocabulary and what you actually get is: a microphone hears something loud, and a small puppet immediately throws its arms and legs around like it just remembered something embarrassing from 2019. Four servos, one Arduino, one increasingly judgmental audience — and now, no beat goes undanced-to.
 
 ## Technical Details
 ### Technologies/Components Used
@@ -32,21 +32,23 @@ Tools used: Arduino IDE, Arduino Serial Monitor, Arduino Serial Plotter, Git & G
 
 For Hardware:
 Main components:
-Arduino UNO
-KY-038 Sound Sensor Module
-PCA9685 16-Channel PWM Servo Driver
-4 × SG90 Servo Motors
-2 × 3.3V Li-ion Batteries
-5V Boost Converter
-Breadboard
-Jumper Wires
-Specifications:
-Arduino UNO — ATmega328P microcontroller, 5V logic
-KY-038 — Analog sound detection through AO pin
-PCA9685 — 16-channel, 12-bit PWM servo controller, I²C interface
-SG90 — 9g micro servo, approximately 4.8–6V operating range
-Li-ion batteries — 3.3V cells connected in parallel
-Boost Converter — Steps battery voltage up to regulated 5V for the servos
+-Arduino UNO
+-KY-038 Sound Sensor Module
+-PCA9685 16-Channel PWM Servo Driver
+-4 × SG90 Servo Motors
+-2 × 3.3V Li-ion Batteries
+-5V Boost Converter
+-Breadboard
+-Jumper Wires
+
+- **Specifications:**
+  - **Arduino UNO** — ATmega328P microcontroller, 5V logic; the brain of the operation, and the only member of the team not currently overreacting
+  - **KY-038** — Analog sound detection via the AO pin; converts "the vibe in the room" into a number the Arduino can panic about
+  - **PCA9685** — 16-channel, 12-bit PWM servo controller communicating over I²C; frees the Arduino from having to babysit four separate PWM signals like a stressed stage manager
+  - **SG90** — 9g micro servo, ~4.8–6V operating range; the actual muscle behind the chaos
+  - **Li-ion batteries** — 2 × 3.3V cells wired in parallel to bump up available current without touching the voltage, because four simultaneously flailing servos are not a "trickle current" kind of workload
+  - **Boost Converter** — Steps the battery pack up to a clean, regulated 5V rail dedicated entirely to the servos, kept electrically separate from the Arduino's own supply so the microcontroller doesn't brown out every time the puppet gets excited
+
 Tools required:
 USB cable
 Breadboard
@@ -55,7 +57,7 @@ Soldering iron (optional, if using soldered/permanent connections)
 Wire cutter/stripper
 Hot glue gun
 Scissors/craft knife
-Cardboard/foam board for puppet constructio
+Cardboard/foam board for puppet construction
 
 ### Implementation
 For Software:
@@ -70,30 +72,27 @@ For Software:
   Tools → Port → Select Arduino COM Port
 7.Open the project .ino file.
 
-# Run
-
-1.Connect the KY-038 sound sensor and PCA9685 according to the circuit design.
-2.Connect the four SG90 servos to PCA9685 channels 0–3.
-3.Power the servos using the 5V boost converter.
-4.Connect the Arduino UNO to the laptop via USB.
-5.Click Upload in Arduino IDE.
-6.After successful uploading, power the circuit.
-7.The Arduino automatically executes the program.
-8.When the KY-038 detects sound above the defined threshold, the puppet performs its pre-programmed dance sequence.
-9.After completing the sequence, it checks for the next sound trigger.
+**Run**
+1. Wire the KY-038 sound sensor and PCA9685 according to the circuit design.
+2. Connect the four SG90 servos to PCA9685 channels 0–3.
+3. Power the servos exclusively via the 5V boost converter — never off the Arduino's own rail.
+4. Connect the Arduino UNO to your laptop via USB.
+5. Click **Upload** in the Arduino IDE.
+6. Once uploaded, power on the circuit.
+7. The Arduino boots up and immediately starts eavesdropping on the room.
+8. When the KY-038 detects sound crossing the defined intensity threshold, the puppet executes its pre-programmed dance sequence with complete commitment.
+9. On sequence completion, it resets and resumes listening for the next excuse to dance.
 
 ### Project Documentation
 For Software:
-
 # Screenshots 
+![Arduino_.serialmonitor_1].(images/Serialmonitor.png)
+Shows the Arduino Serial Monitor displaying real-time sound sensor readings received from the KY-038.
 
 
+![Ardunio_serialmonitor_2](images/serial2.png)
+Shows the Arduino Serial Plotter visualizing variations in sound intensity, demonstrating the sensor's response to acoustic input.
 
-![Screenshot2](Add screenshot 2 here with proper name)
-*Add caption explaining what this shows*
-
-![Screenshot3](Add screenshot 3 here with proper name)
-*Add caption explaining what this shows*
 
 # Diagrams
 ![Workflow](Add your workflow/architecture diagram here)
