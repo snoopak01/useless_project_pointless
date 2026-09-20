@@ -10,7 +10,7 @@
 
 
 ### Team Members
-- Member 1: Snoopa K - NSS COLLEGE OF ENGINEERING,PALAKKAD
+- Member 1: SNOOPA K - NSS COLLEGE OF ENGINEERING,PALAKKAD
 - Member 2: SAI KRISHNA -  NSS COLLEGE OF ENGINEERING,PALAKKAD
 - 
 ### Project Description
@@ -86,7 +86,7 @@ For Software:
 ### Project Documentation
 For Software:
 # Screenshots 
-![Arduino_.serialmonitor_1].(images/Serialmonitor.png)
+![Arduino_.serialmonitor_1](images/Serialmonitor.png)
 Shows the Arduino Serial Monitor displaying real-time sound sensor readings received from the KY-038.
 
 
@@ -108,14 +108,33 @@ For Hardware:
 *Add caption explaining the schematic*
 
 # Build Photos
-![Components](Add photo of your components here)
-*List out all components shown*
+![Components](images/PCA9685.jpeg)
+*PCA9685-: 16-channel, 12-bit PWM servo controller communicating over I²C*
 
-![Build](Add photos of build process here)
-*Explain the build steps*
+![Components](images/Servos.jpeg)
+*servos SG90-: 9g micro servo, ~4.8–6V operating range; the actual muscle behind the chaos*
 
-![Final](Add photo of final product here)
-*Explain the final build*
+![Components](images/arduino.jpeg)
+*Arduino uno-:ATmega328P microcontroller, 5V logic; the brain of the operation*
+
+![Components](images/battery.jpeg)
+*Battery-: 2 × 3.3V cells wired in parallel to bump up available current without touching the voltage*
+
+![Components](images/boostconnector.jpeg)
+*boostconnector-:Steps the battery pack up to a clean, regulated 5V rail dedicated entirely to the servos*
+
+![Components](images/ky038.jpeg)
+*ky038-: Analog sound detection via the AO pin*
+
+![Build](images/starting.jpeg)
+*Cardboard pieces were cut and assembled to form the head, torso, arms, and legs, creating the basic Pinocchio appearance.*
+
+![Build](images/fourservos.jpeg)
+*Shows the four SG90 servo motors operating and driving the corresponding arm and leg movements of the cardboard Pinocchio..*
+
+
+![Final](images/pinocchio.jpeg)
+Shows the completed cardboard Pinocchio with the servo mechanism and electronic components fully assembled and ready for operation.*
 
 ### Project Demo
 # Video
@@ -126,10 +145,18 @@ For Hardware:
 [Add any extra demo materials/links]
 
 ## Team Contributions
-- [Name 1]: [Specific contributions]
-- [Name 2]: [Specific contributions]
-- [Name 3]: [Specific contributions]
-
+- Snoopa K:
+  - Created the movable arm and leg joints.
+  - Connected the servos to the limbs using thread-based mechanisms.
+  - Worked on the Arduino, PCA9685, sound sensor, and power connections.
+  - Developed the Arduino program for the project.
+  - Debugged the system and helped with final testing and documentation.
+- Sai Krishna:
+  - Designed and built the cardboard Pinocchio structure.
+  - Mounted and positioned the four SG90 servo motors.
+  - Tested the physical movement and adjusted the servo positions.
+  - Integrated the KY-038 sound sensor for sound detection.
+  - Tested different sound thresholds and servo angles.
 ---
 Made with ❤️ at TinkerHub Useless Projects 
 
